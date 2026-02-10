@@ -85,16 +85,16 @@ CVFS/
 ```
 ---
 
-#⚙️ Compilation & Execution
+# ⚙️ Compilation & Execution
 
-# Linux / Ubuntu
+Linux / Ubuntu
 
 ```
 gcc cvfs.c -o Myexe
 ./Myexe
 ```
 
-# Windows (MinGW)
+Windows (MinGW)
 
 ```
 gcc cvfs.c -o Myexe.exe
@@ -103,7 +103,7 @@ Myexe.exe
 
 ---
 
-#💻 Example Usage
+# 💻 Example Usage
 
 ```
 Marvellous CVFS > create Demo.txt 3
@@ -127,7 +127,7 @@ Marvellous CVFS > exit
 
 ---
 
-#📈 Future Improvements
+# 📈 Future Improvements
 
 * Directory support
 * Persistent storage (save data to disk)
@@ -135,6 +135,6 @@ Marvellous CVFS > exit
 
 ---
 
-#👨‍💻 Author
+# 👨‍💻 Author
 
 CR Dugade (crd-codes)

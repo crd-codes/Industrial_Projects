@@ -1,17 +1,17 @@
 # File Packer & Unpacker with Encryption
 
-**Technology:** Java Programming
+** 🛠 Technology:** Java Programming
 
 ---
 
-## Project Overview
+## 📌 Project Overview
 
 This project is a **Java-based file utility tool** that provides functionality for packing multiple files into a single archive and unpacking them back with all metadata preserved.  
 To enhance security, the packed file is **encrypted**, and only authorized users can decrypt and extract the data.  
 
 ---
 
-## Key Features
+## ✨ Features
 
 ### File Packing
 - Combines multiple regular files into a single archive file.
@@ -26,7 +26,7 @@ To enhance security, the packed file is **encrypted**, and only authorized users
 - Uses XOR-based encryption in Java.
 
 
-## Example Usage (Console Flow)
+## ⚙️💻 Example Usage (Console Flow)
 
 ### Packing files
 ```bash
@@ -50,5 +50,15 @@ File size: 250
 File name: file3.txt
 File size: 180
 ```
+
+# 👨‍💻 Author
+
+CR Dugade (crd-codes)
+
+
+
+
+
+
 
 

@@ -67,13 +67,6 @@ The following Linux-like operations are implemented using custom functions:
 | unlink()        | UnlinkFile()  |
 | stat()          | StatFile()    |
 
-These functions simulate file operations using:
-
-* Incore Inode Table
-* File Table
-* File Descriptor Table
-* Memory-based file storage
-
 ---
 
 # Platform Independent

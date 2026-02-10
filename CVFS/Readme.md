@@ -1,6 +1,6 @@
-##Customised Virtual File System (CVFS)
+## Customised Virtual File System (CVFS)
 
-##📌 Project Overview
+# 📌 Project Overview
 
 Customised Virtual File System (CVFS) is a system programming project written in C that simulates the core functionality of the Linux File System.
 The project provides a Linux-like environment through a custom shell where users can perform file operations such as create, open, read, write, delete, and list files.

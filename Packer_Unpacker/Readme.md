@@ -33,7 +33,7 @@ To enhance security, the packed file is **encrypted**, and only authorized users
 $ javac Packer.java
 $ java Packer
 Enter the name of folder: Data
-Enter the name of packed file: packed.dat
+Enter the name of packed file: packed.txt
 Folder is present
 Number of files in the folder are: 3
 ```
@@ -42,7 +42,7 @@ Number of files in the folder are: 3
 ```bash
 $ javac Unpacker.java
 $ java Unpacker
-Enter the name of packed file: packed.dat
+Enter the name of packed file: packed.txt
 File name: file1.txt
 File size: 120
 File name: file2.txt

@@ -5,7 +5,14 @@
 A **C++ template-based library** implementing common data structures with generic programming. Supports **Singly & Doubly Linked Lists (linear & circular), Stack, and Queue** with all basic operations. Designed for **learning, testing, and real-world applications**.
 
 ---
+## 🛠️ Tech Stack
 
+- **Language:** C++  
+- **Concepts:** Object-Oriented Programming (OOP)
+                Generic Programming using Templates
+                Data Structures (Linked Lists, Stack, Queue)
+                Dynamic Memory Management
+---
 ## 🚀 Features
 
 - **Singly Linear & Circular Linked List**  
@@ -23,14 +30,7 @@ A **C++ template-based library** implementing common data structures with generi
   
 ---
 
-## 🛠️ Tech Stack
 
-- **Language:** C++  
-- **Concepts:** Object-Oriented Programming (OOP)
-                Generic Programming using Templates
-                Data Structures (Linked Lists, Stack, Queue)
-                Dynamic Memory Management
----
 
 ## 📂 Project Structure
 ```

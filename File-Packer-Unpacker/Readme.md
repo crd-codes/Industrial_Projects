@@ -1,7 +1,5 @@
 # File Packer & Unpacker with Encryption
 
-## 🛠 Technology : Java Programming
-
 ---
 
 ## 📌 Project Overview
@@ -10,6 +8,13 @@ This project is a **Java-based file utility tool** that provides functionality f
 To enhance security, the packed file is **encrypted**, and only authorized users can decrypt and extract the data.  
 
 ---
+
+## 🛠 Technology used
+
+- Java Programming
+- File Handling (FileInputStream, FileOutputStream)
+- Data Streams (Buffered Streams)
+- Basic Encryption (XOR-based)
 
 ## ✨ Features
 
@@ -59,6 +64,11 @@ File size: 250
 File name: file3.txt
 File size: 180
 ```
+
+## 💡 Future Improvements
+
+- Add password-based authentication for packing/unpacking
+- Create a GUI version using Java Swing
 
 ## 👨‍💻 Author
 

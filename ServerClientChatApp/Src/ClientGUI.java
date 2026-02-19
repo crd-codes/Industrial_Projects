@@ -74,7 +74,8 @@ class ClientLogic implements ActionListener
 
         // Connect to server in background
         new Thread(() -> {
-            try {
+            try 
+            {
                 sobj = new Socket("localhost", 5200);
                 addMessage("Connected to Server!");
 
@@ -83,7 +84,9 @@ class ClientLogic implements ActionListener
 
                 new Thread(() -> receiveMessages()).start();
 
-            } catch (IOException e) {
+            } 
+            catch (IOException e) 
+            {
                 addMessage("Connection failed: " + e.getMessage());
             }
         }).start();
@@ -116,8 +119,7 @@ class ClientLogic implements ActionListener
         } 
         finally 
         {
-            try 
-            { if (sobj != null && !sobj.isClosed()) sobj.close(); }
+            try { if (sobj != null && !sobj.isClosed()) sobj.close(); }
             catch (IOException ex) 
             {}
         }
@@ -141,16 +143,16 @@ class ClientLogic implements ActionListener
                     sobj.close();
                     SwingUtilities.invokeLater(() -> fobj.dispose());
                 }
-             } 
-             else 
-             {
+            } 
+            else 
+            {
                 addMessage("Not connected to server.");
-             }
-         } 
-         catch (Exception e) 
-         {
+            }
+        } 
+        catch (Exception e) 
+        {
             addMessage("Error sending message.");
-         }
+        }
     }
 }
 

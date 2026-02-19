@@ -75,7 +75,8 @@ class ServerLogic implements ActionListener
 
         // Background thread for server
         new Thread(() -> {
-            try {
+            try 
+            {
                 ssobj = new ServerSocket(5200);
                 addMessage("Server started. Waiting for client...");
 
@@ -87,7 +88,9 @@ class ServerLogic implements ActionListener
 
                 new Thread(() -> receiveMessages()).start();
 
-            } catch (IOException e) {
+            } 
+            catch (IOException e) 
+            {
                 addMessage("Server error: " + e.getMessage());
             }
         }).start();
@@ -105,43 +108,60 @@ class ServerLogic implements ActionListener
     // Receive messages continuously
     private void receiveMessages()
     {
-        try {
+        try 
+        {
             String msg;
-            while (bobj1 != null && (msg = bobj1.readLine()) != null) {
+            while (bobj1 != null && (msg = bobj1.readLine()) != null) 
+            {
                 addMessage("Client: " + msg);
             }
             addMessage("Client disconnected.");
-        } catch (IOException e) {
+        }
+        catch (IOException e) 
+        {
             addMessage("Connection closed.");
-        } finally {
-            try { if (sobj != null && !sobj.isClosed()) sobj.close(); } catch (IOException ex) {}
-            try { if (ssobj != null && !ssobj.isClosed()) ssobj.close(); } catch (IOException ex) {}
+        } 
+        finally 
+        {
+            try { if (sobj != null && !sobj.isClosed()) sobj.close(); } 
+            catch (IOException ex) 
+            {}
+            try { if (ssobj != null && !ssobj.isClosed()) ssobj.close(); }
+            catch (IOException ex) 
+            {}
         }
     }
 
     // Send message
     public void actionPerformed(ActionEvent aobj)
     {
-        try {
-            if (pobj != null && sobj != null && !sobj.isClosed()) {
+        try 
+        {           
+           if (pobj != null && sobj != null && !sobj.isClosed()) 
+           {
                 String msg = tobj.getText();
                 pobj.println(msg);
                 addMessage("You: " + msg);
                 tobj.setText("");
 
-                if (msg.equalsIgnoreCase("end")) {
+                if (msg.equalsIgnoreCase("end")) 
+                {
                     addMessage("Chat ended.");
                     sobj.close();
                     ssobj.close();
                     SwingUtilities.invokeLater(() -> fobj.dispose());
                 }
-            } else {
+            } 
+            else 
+            {
                 addMessage("No client connected.");
             }
-        } catch (Exception e) {
+          }
+          catch (Exception e)
+          {
             addMessage("Error sending message.");
-        }
-    }
+          }
+      }
 }
 
 class ServerGUI

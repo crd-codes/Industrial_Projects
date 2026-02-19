@@ -156,12 +156,12 @@ class ServerLogic implements ActionListener
             {
                 addMessage("No client connected.");
             }
-          }
-          catch (Exception e)
-          {
+        }
+        catch (Exception e)
+        {
             addMessage("Error sending message.");
-          }
-      }
+        }
+    }
 }
 
 class ServerGUI

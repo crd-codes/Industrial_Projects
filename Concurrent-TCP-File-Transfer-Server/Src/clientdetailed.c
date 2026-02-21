@@ -93,7 +93,9 @@ int main(int argc, char *argv[])
     // --------------------------------------------------------
     // Step 2 : Connect to Server
     // --------------------------------------------------------
-    memset(&ServerAddr, 0, sizeof(ServerAddr));
+    // Reset ClientAddr structure before accept()
+    // Ensures clean structure for every new client connection
+    memset(&ClientAddr, 0, sizeof(ClientAddr));
 
     ServerAddr.sin_family = AF_INET;
     ServerAddr.sin_port = htons(Port);  // Convert port to network byte order

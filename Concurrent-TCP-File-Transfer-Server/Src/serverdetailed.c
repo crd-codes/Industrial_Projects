@@ -103,8 +103,12 @@ int main(int argc, char *argv[])
     // ==================================================
     // Step 2 : Bind socket to IP and Port
     // ==================================================
-    memset(&ServerAddr, 0, sizeof(ServerAddr));
 
+    // Clear the ServerAddr structure by setting all bytes to 0
+    // This avoids garbage values inside the structure
+    // Must be done before assigning sin_family, sin_port, etc.
+    memset(&ServerAddr, 0, sizeof(ServerAddr));
+    
     ServerAddr.sin_family = AF_INET;          // IPv4
     ServerAddr.sin_port = htons(Port);        // Convert port to network byte order
     ServerAddr.sin_addr.s_addr = INADDR_ANY;  // Accept connections from any IP

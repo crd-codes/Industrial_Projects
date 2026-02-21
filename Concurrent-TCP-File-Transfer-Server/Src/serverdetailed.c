@@ -164,7 +164,10 @@ int main(int argc, char *argv[])
         // ==================================================
         // Step 5 : Create new process using fork()
         // Purpose : Handle multiple clients concurrently
+        // Parent Process (pid > 0)
+        // Child Process (pid == 0)
         // ==================================================
+        
         pid = fork();
 
         if(pid < 0)

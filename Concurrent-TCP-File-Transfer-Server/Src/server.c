@@ -101,7 +101,8 @@ int main(int argc, char *argv[])
     //////////////////////////////////////////////////
     //  Step 2 : Bind socket to IP and Port
     //////////////////////////////////////////////////
-    
+
+    // used to fill a block of memory with a particular value(0).
     memset(&ServerAddr, 0,sizeof(ServerAddr));
 
     // Initialize the structure

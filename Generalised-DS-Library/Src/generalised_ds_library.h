@@ -31,6 +31,8 @@ class SinglyLLL
 
     public:    
         SinglyLLL();
+        ~SinglyLLL();
+
         void InsertFirst(T);  
         void InsertLast(T);
         void DeleteFirst();
@@ -48,6 +50,15 @@ SinglyLLL<T> :: SinglyLLL()
     std::cout<<"Singly Linear LL gets created\n";
     this->first = NULL;
     this->iCountNode = 0;
+}
+
+template <class T>
+SinglyLLL<T> :: ~SinglyLLL()
+{
+    while(iCountNode != 0)
+    {
+        DeleteFirst();
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -226,7 +237,8 @@ void SinglyLLL<T> :: DeleteAtPos(int pos)
 
     if(pos < 1 || pos > this->iCountNode)
     {
-        std::cout<<"Invalid position";
+        std::cout<<"Invalid position\n";
+        return;
     }
 
     if(pos == 1)
@@ -277,6 +289,8 @@ class SinglyCLL
 
     public:
         SinglyCLL();
+        ~SinglyCLL();
+
         void InsertFirst(T no);
         void InsertLast(T no);
         void DeleteFirst();
@@ -295,6 +309,15 @@ SinglyCLL<T>::SinglyCLL()
     this->first = NULL;
     this->last = NULL;
     this->iCount = 0;
+}
+
+template <class T>
+SinglyCLL<T> :: ~SinglyCLL()
+{
+    while(iCount !=0)
+    {
+        DeleteFirst();
+    }
 }
 
 template <class T>
@@ -528,8 +551,8 @@ class DoublyLLLnode
 {
     public:
         T data;
-        DoublyLLLnode *next;
-        DoublyLLLnode  *prev;
+        DoublyLLLnode<T> *next;
+        DoublyLLLnode<T> *prev;
 
         DoublyLLLnode(T no)
         {
@@ -548,6 +571,7 @@ class DoublyLLL
 
     public:    
         DoublyLLL();
+        ~DoublyLLL();
 
         void InsertFirst(T);
         void InsertLast(T);
@@ -568,6 +592,15 @@ DoublyLLL<T> :: DoublyLLL()
 
     this->first = NULL;
     this->iCount = 0;
+}
+
+template<class T>
+DoublyLLL<T> :: ~DoublyLLL()
+{
+    while(iCount != 0)
+    {
+        DeleteFirst();
+    }
 }
 
 template<class T>
@@ -789,6 +822,8 @@ class DoublyCLL
 
     public:
         DoublyCLL();
+        ~DoublyCLL();
+
         void InsertFirst(T no);
         void InsertLast(T no);
         void DeleteFirst();
@@ -807,6 +842,15 @@ DoublyCLL<T>::DoublyCLL()
     this->first = NULL;
     this->last = NULL;
     this->iCount = 0;
+}
+
+template <class T>
+DoublyCLL<T> :: ~DoublyCLL()
+{
+    while(iCount != 0)
+    {
+        DeleteFirst();
+    }
 }
 
 template <class T>
@@ -1073,6 +1117,7 @@ class Stack
 
     public:
         Stack();
+        ~Stack();
 
         void push(T);     
         T pop();          
@@ -1088,6 +1133,15 @@ Stack<T> :: Stack()
 
     this->first = NULL;
     this->iCount = 0;
+}
+
+template <class T>
+Stack<T> :: ~Stack()
+{
+    while(iCount != 0)
+    {
+        pop();
+    }
 }
 
 template<class T>
@@ -1106,13 +1160,13 @@ void Stack<T> :: push(T no)
 template<class T>
 T Stack<T> :: pop()
 {
-    T Value = 0;
+    T Value{};
     Stacknode<T> *temp = this->first;
 
     if(this->first == NULL)
     {
         std::cout<<"Stack is empty\n";
-        return -1;
+        return T();
     }
 
     Value = this->first->data;
@@ -1128,12 +1182,12 @@ T Stack<T> :: pop()
 template<class T>
 T Stack<T> :: peep()
 {
-    T Value = 0;
+    T Value{};
 
     if(this->first == NULL)
     {
         std::cout<<"Stack is empty\n";
-        return -1;
+        return T();
     }
 
     Value = this->first->data;
@@ -1195,6 +1249,8 @@ class Queue
 
     public:
         Queue();
+        ~Queue();
+
         void enqueue(T);      
         T dequeue();          
         void Display();
@@ -1210,6 +1266,15 @@ Queue<T> :: Queue()
     this->last = NULL;
 
     this->iCount = 0;
+}
+
+template <class T>
+Queue<T> :: ~Queue()
+{
+    while(iCount != 0)
+    {
+        dequeue();
+    }
 }
 
 template <class T>
@@ -1236,13 +1301,13 @@ void Queue<T> :: enqueue(T no)
 template <class T>
 T Queue<T> :: dequeue()
 {
-    T Value = 0;
+    T Value{};
     Queuenode<T> *temp = this->first;
 
     if(this->first == NULL && this->last == NULL)
     {
         std::cout<<"Queue is empty\n";
-        return -1;
+        return T();
     }
 
     Value = this->first->data;
